@@ -1,0 +1,16 @@
+node_modules
+.idea
+.vscode
+.DS_Store
+logs
+*.log
+pids
+*.pid
+*.seed
+lib-cov
+coverage
+.grunt
+.lock-wscript
+
+dist
+ElectronApp-*

@@ -1,0 +1,54 @@
+@require "variables"
+@require "reset"
+
+$text-color ?= #000
+
+html,
+body
+	width 100%
+	overflow-x hidden
+	padding 0
+	margin 0
+
+body
+	$light()
+	font-size $font-size-root
+	color $text-color
+	cursor default
+
+img
+	max-width 100%
+	height auto
+	vertical-align middle
+
+svg
+	pointer-events none
+
+b, i
+	font-style normal
+	font-weight normal
+
+a
+	font-weight inherit
+	color inherit
+
+a:not([class])
+	text-decoration underline
+
+// Helper classes
+.accessible
+	position: absolute !important
+	clip: rect(1px 1px 1px 1px) /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px)
+	overflow hidden
+	size 1px 1px
+
+.fleft
+	float left
+
+.fright
+	float right
+
+.clear
+	clear both
+

@@ -1,0 +1,75 @@
+{
+  "name": "electron-starter",
+  "version": "1.0.0",
+  "description": "A minimal Electron application with Webpack, React, Stylus",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently -k \"npm run server\" \"npm run electron\"",
+    "electron": "cross-env NODE_ENV=development electron .",
+    "server": "babel-node server.js",
+    "build": "cross-env NODE_ENV=development webpack --config webpack.config.production.js && electron-packager . ElectronApp --platform=win32 --arch=all --prune --overwrite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viliamkopecky/electron-starter.git"
+  },
+  "babel": {
+    "presets": [
+      "es2015-node6",
+      "stage-0",
+      "react"
+    ]
+  },
+  "dependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015-node6": "^0.2.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "concurrently": "^2.1.0",
+    "cross-env": "^1.0.8",
+    "css-loader": "^0.23.1",
+    "debounce": "^1.0.0",
+    "electron-packager": "^7.1.0",
+    "electron-prebuilt": "^1.2.5",
+    "express": "^4.14.0",
+    "file-loader": "^0.9.0",
+    "menubar": "^4.1.2",
+    "moment": "^2.13.0",
+    "postcss-loader": "^0.9.1",
+    "poststylus": "^0.2.3",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "redux": "^3.5.2",
+    "redux-saga": "^0.10.5",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.1.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0",
+    "webpack-target-electron-renderer": "^0.4.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.7.4",
+    "concurrently": "^2.0.0",
+    "css-loader": "^0.23.1",
+    "debounce": "^1.0.0",
+    "electron-packager": "^6.0.0",
+    "express": "^4.13.4",
+    "file-loader": "^0.8.5",
+    "moment": "^2.12.0",
+    "postcss-loader": "^0.8.2",
+    "react-dom": "^0.14.8",
+    "react": "^0.14.8",
+    "redux-saga": "^0.9.5",
+    "redux": "^3.3.1",
+    "style-loader": "^0.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0",
+    "webpack-target-electron-renderer": "^0.4.0",
+    "webpack": "^1.12.14"
+  }
+}
