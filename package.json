@@ -8,8 +8,8 @@
     "start": "concurrently -k \"npm run server\" \"npm run electron\"",
     "electron": "cross-env NODE_ENV=development electron .",
     "server": "babel-node server.js",
-    "build": "cross-env NODE_ENV=development webpack --config webpack.config.production.js && electron-packager . ElectronApp --platform=win32 --arch=all --prune --overwrite"
     "build": "cross-env NODE_ENV=development webpack --config webpack.config.production.js && electron-packager . --out=build --platform=win32 --arch=x64 --prune --overwrite",
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,16 @@
     "electron-prebuilt": "^1.2.5",
     "express": "^4.14.0",
     "file-loader": "^0.9.0",
+    "jasmine": "^2.4.1",
+    "json-loader": "^0.5.4",
+    "karma": "^1.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-electron-launcher": "^0.1.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-mocha-reporter": "^2.0.4",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
     "menubar": "^4.1.2",
     "moment": "^2.13.0",
     "postcss-loader": "^0.9.1",
@@ -62,16 +72,18 @@
     "electron-packager": "^6.0.0",
     "express": "^4.13.4",
     "file-loader": "^0.8.5",
+    "karma-mocha-reporter": "^2.0.4",
+    "mocha": "^2.5.3",
     "moment": "^2.12.0",
     "postcss-loader": "^0.8.2",
-    "react-dom": "^0.14.8",
     "react": "^0.14.8",
-    "redux-saga": "^0.9.5",
+    "react-dom": "^0.14.8",
     "redux": "^3.3.1",
+    "redux-saga": "^0.9.5",
     "style-loader": "^0.13.1",
+    "webpack": "^1.12.14",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0",
-    "webpack-target-electron-renderer": "^0.4.0",
-    "webpack": "^1.12.14"
+    "webpack-target-electron-renderer": "^0.4.0"
   }
 }
