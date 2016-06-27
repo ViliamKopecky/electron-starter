@@ -1,5 +1,6 @@
 {
   "name": "electron-starter",
+  "productName": "ElectronApp",
   "version": "1.0.0",
   "description": "A minimal Electron application with Webpack, React, Stylus",
   "main": "index.js",
@@ -8,6 +9,7 @@
     "electron": "cross-env NODE_ENV=development electron .",
     "server": "babel-node server.js",
     "build": "cross-env NODE_ENV=development webpack --config webpack.config.production.js && electron-packager . ElectronApp --platform=win32 --arch=all --prune --overwrite"
+    "build": "cross-env NODE_ENV=development webpack --config webpack.config.production.js && electron-packager . --out=build --platform=win32 --arch=x64 --prune --overwrite",
   },
   "repository": {
     "type": "git",
